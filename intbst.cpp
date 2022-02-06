@@ -238,6 +238,10 @@ bool IntBST::remove(int value){
     Node* n = getNodeFor(value, root);
     if(n){
         if(!n->left && !n->right){//0 children
+            if(n == root){
+                n->info = 0;
+                return true;
+            }
             if(n == n->parent->left){
                 n->parent->left = NULL;
             }else if(n == n->parent->right){
@@ -259,7 +263,6 @@ bool IntBST::remove(int value){
             }
             delete n;
         }else if(n->left && n->right){//2 children, successor
-            //Node* temp = getSuccessorNode(value);
             int tempval = getSuccessor(value);
             bool result = remove(tempval);
             n->info = tempval;
