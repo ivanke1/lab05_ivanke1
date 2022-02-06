@@ -239,7 +239,7 @@ bool IntBST::remove(int value){
     if(n){
         if(!n->left && !n->right){//0 children
             if(n == root){
-                n = NULL;
+                root = NULL;
                 return true;
             }
             if(n == n->parent->left){
