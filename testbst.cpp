@@ -124,7 +124,13 @@ int main() {
 
     // add tests for optional methods that you attempt to implement
     // but don't do that until after submitting the basic version
-
+    cout<< "BST 1 ele remove"<<endl;
+    IntBST bst3;
+    if (all || testnum == 7){
+        bst3.insert(1);
+        bst3.remove(1);
+        bst3.printPreOrder();
+    }
     return 0;
 }
 
