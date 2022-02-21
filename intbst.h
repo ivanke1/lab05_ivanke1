@@ -26,8 +26,8 @@ class IntBST {
     bool contains(T value) const;  // true if value is in tree
 
     // THESE ARE HARDER! DO THESE LAST
-    int getPredecessor(T value) const;       // returns the predecessor value of the given value or 0 if there is none
-    int getSuccessor(T value) const;         // returns the successor value of the given value or 0 if there is none
+    T getPredecessor(T value) const;       // returns the predecessor value of the given value or 0 if there is none
+    T getSuccessor(T value) const;         // returns the successor value of the given value or 0 if there is none
     bool remove(T value);                    // deletes the Node containing the given value from the tree
 
  private:

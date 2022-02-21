@@ -125,7 +125,7 @@ int main() {
     // add tests for optional methods that you attempt to implement
     // but don't do that until after submitting the basic version
     cout<< "BST 1 ele remove"<<endl;
-    IntBST<double>  bst3;
+    IntBST<float>  bst3;
     if (all || testnum == 7){
         bst3.insert(2.8);
         bst3.insert(4.4);

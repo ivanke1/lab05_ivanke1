@@ -7,7 +7,7 @@ using std::cout;
 
 // constructor sets up empty tree
 template<class T>
-IntBST<T>::IntBST() : root(0) { }
+IntBST<T>::IntBST() : root(nullptr) { }
 
 // destructor deletes all nodes
 template<class T>
@@ -145,7 +145,7 @@ int IntBST<T>::count(Node *n) const {
     return total;
 }
 
-// IMPLEMENT THIS FIRST: returns the node for a given value or NULL if none exists
+// IMPLEMENT THIS FIRST: returns the node for a given value or nullptr if none exists
 // Parameters:
 // int value: the value to be found
 // Node* n: the node to start with (for a recursive call)
@@ -162,7 +162,7 @@ typename IntBST<T>::Node* IntBST<T>::getNodeFor(T value, Node* n) const{
             return getNodeFor(value, n->right);
         }
     }
-    return NULL;
+    return nullptr;
 }
 
 // returns true if value is in the tree; false if not
@@ -185,7 +185,7 @@ typename IntBST<T>::Node* IntBST<T>::getPredecessorNode(T value) const{
                     return node;
                 }
             }
-            return NULL;
+            return nullptr;
         } else {
             while(node->parent){
                 node = node->parent;
@@ -193,10 +193,10 @@ typename IntBST<T>::Node* IntBST<T>::getPredecessorNode(T value) const{
                     return node;
                 }
             }
-            return NULL;
+            return nullptr;
         }
     }else{
-        return NULL;
+        return nullptr;
     }
 }
 
@@ -225,7 +225,7 @@ typename IntBST<T>::Node* IntBST<T>::getSuccessorNode(T value) const{
                     return node;
                 }
             }
-            return NULL;
+            return nullptr;
         } else {
             while(node->parent){
                 node = node->parent;
@@ -233,10 +233,10 @@ typename IntBST<T>::Node* IntBST<T>::getSuccessorNode(T value) const{
                     return node;
                 }
             }
-            return NULL;
+            return nullptr;
         }
     }else{
-        return NULL;
+        return nullptr;
     }
 }
 
@@ -259,13 +259,13 @@ bool IntBST<T>::remove(T value){
     if(n){
         if(!n->left && !n->right){//0 children
             if(n == root){
-                root = NULL;
+                root = nullptr;
                 return true;
             }
             if(n == n->parent->left){
-                n->parent->left = NULL;
+                n->parent->left = nullptr;
             }else if(n == n->parent->right){
-                n->parent->right = NULL;
+                n->parent->right = nullptr;
             }
             delete n;
         }else if(!n->right){//l child
