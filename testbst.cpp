@@ -12,7 +12,7 @@ int getTest();
 // and does some simple tests of tree methods
 int main() {
 
-    IntBST bst1, bst2;
+    IntBST<int> bst1, bst2;
 
     // insert data to bst1
     bst1.insert(64);
@@ -125,7 +125,7 @@ int main() {
     // add tests for optional methods that you attempt to implement
     // but don't do that until after submitting the basic version
     cout<< "BST 1 ele remove"<<endl;
-    IntBST bst3;
+    IntBST<int>  bst3;
     if (all || testnum == 7){
         bst3.insert(1);
         bst3.remove(1);
