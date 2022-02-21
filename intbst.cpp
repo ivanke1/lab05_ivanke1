@@ -283,7 +283,7 @@ bool IntBST<T>::remove(T value){
             }
             delete n;
         }else if(n->left && n->right){//2 children, successor
-            int tempval = getSuccessor(value);
+            T tempval = getSuccessor(value);
             bool result = remove(tempval);
             n->info = tempval;
             return result;

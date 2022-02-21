@@ -125,11 +125,11 @@ int main() {
     // add tests for optional methods that you attempt to implement
     // but don't do that until after submitting the basic version
     cout<< "BST 1 ele remove"<<endl;
-    IntBST<float>  bst3;
+    IntBST<string>  bst3;
     if (all || testnum == 7){
-        bst3.insert(2.8);
-        bst3.insert(4.4);
-        cout<< bst3.getPredecessor(4.4)<<endl;
+        bst3.insert("ab");
+        bst3.insert("cd");
+        cout<< bst3.getPredecessor("cd")<<endl;
         bst3.printInOrder();
     }
     return 0;
