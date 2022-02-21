@@ -202,7 +202,7 @@ typename IntBST<T>::Node* IntBST<T>::getPredecessorNode(T value) const{
 
 // returns the predecessor value of the given value or 0 if there is none
 template<class T>
-int IntBST<T>::getPredecessor(T value) const{
+T IntBST<T>::getPredecessor(T value) const{
     Node *node = getPredecessorNode(value);
     if(node){
         return node->info;
@@ -242,7 +242,7 @@ typename IntBST<T>::Node* IntBST<T>::getSuccessorNode(T value) const{
 
 // returns the successor value of the given value or 0 if there is none
 template<class T>
-int IntBST<T>::getSuccessor(T value) const{
+T IntBST<T>::getSuccessor(T value) const{
     Node *node = getSuccessorNode(value);
     if(node){
         return node->info;
